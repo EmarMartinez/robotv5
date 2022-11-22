@@ -7,4 +7,10 @@
     <string name="informaci_n_del_dispositivo">Información del dispositivo</string>
     <string name="bateria_restante">Bateria restante</string>
     <string name="error_en_la_conexion">Error en la conexion</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="prueba_de_dictado">Prueba de dictado</string>
+    <string name="introduzca_su_mensaje">Introduzca su mensaje</string>
+    <string name="comenzar">Comenzar</string>
+    <string name="parar">Parar</string>
 </resources>

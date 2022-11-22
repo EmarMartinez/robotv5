@@ -4,9 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
@@ -14,6 +12,7 @@ import android.widget.FrameLayout;
 import com.ainirobot.coreservice.client.ApiListener;
 import com.ainirobot.coreservice.client.RobotApi;
 import com.miempresa.pruebav5.application.ModuleCallback;
+import com.miempresa.pruebav5.fragments.ActivitiesFragment;
 import com.miempresa.pruebav5.fragments.ConectionFailedFragment;
 import com.miempresa.pruebav5.fragments.InfoFragment;
 import com.miempresa.pruebav5.fragments.MainFragment;
@@ -26,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     FragmentTransaction transaction;
     Fragment fragmentMain;
     Fragment fragmentInfo;
+    Fragment fragmentActivities;
 
     private int checkTimes;
 
@@ -45,9 +45,20 @@ public class MainActivity extends AppCompatActivity {
         checkTimes = 0;
         btnInfo = (Button)findViewById(R.id.btn_info);
         btnActivities = (Button)findViewById(R.id.btn_activities);
+
+        btnActivities.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                transaction = getSupportFragmentManager().beginTransaction();
+                fragmentActivities = new ActivitiesFragment();
+                transaction.replace(R.id.main_fragment,fragmentActivities).commit();
+            }
+        });
+
         mContent = findViewById(R.id.main_fragment);
-        conectarRobot();
-        iniciarRobot();
+
+//        conectarRobot();
+//        iniciarRobot();
 
         btnInfo.setOnClickListener(new View.OnClickListener() {
             @Override
