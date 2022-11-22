@@ -24,14 +24,14 @@
             android:hint="@string/bateria_restante"/>
 
         <TextView
-            android:id="@+id/robot_info"
+            android:id="@+id/label_info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/informaci_n_del_dispositivo"/>
 
         <TextView
-            android:id="@+id/serial_number"
+            android:id="@+id/robot_system_version"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"/>
