@@ -13,6 +13,7 @@ import android.widget.FrameLayout;
 
 import com.ainirobot.coreservice.client.ApiListener;
 import com.ainirobot.coreservice.client.RobotApi;
+import com.miempresa.pruebav5.application.ModuleCallback;
 import com.miempresa.pruebav5.fragments.ConectionFailedFragment;
 import com.miempresa.pruebav5.fragments.InfoFragment;
 import com.miempresa.pruebav5.fragments.MainFragment;
@@ -30,6 +31,12 @@ public class MainActivity extends AppCompatActivity {
 
     private FrameLayout mContent;
 
+    private static MainActivity mInstance;
+
+    public static MainActivity getInstance(){
+        return mInstance;
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         btnInfo = (Button)findViewById(R.id.btn_info);
         btnActivities = (Button)findViewById(R.id.btn_activities);
         mContent = findViewById(R.id.main_fragment);
+        conectarRobot();
         iniciarRobot();
 
         btnInfo.setOnClickListener(new View.OnClickListener() {
@@ -52,6 +60,26 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    private void conectarRobot() {
+        RobotApi.getInstance().connectServer(this, new ApiListener() {
+            @Override
+            public void handleApiDisabled() {
+
+            }
+
+            @Override
+            public void handleApiConnected() {
+                RobotApi.getInstance().setCallback(new ModuleCallback());
+            }
+
+            @Override
+            public void handleApiDisconnected() {
+
+            }
+        });
+    }
+
     public void switchFragment(Fragment fragment){
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.main_fragment, fragment, fragment.getClass().getName())
