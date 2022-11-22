@@ -57,8 +57,8 @@ public class MainActivity extends AppCompatActivity {
 
         mContent = findViewById(R.id.main_fragment);
 
-//        conectarRobot();
-//        iniciarRobot();
+        conectarRobot();
+        iniciarRobot();
 
         btnInfo.setOnClickListener(new View.OnClickListener() {
             @Override
