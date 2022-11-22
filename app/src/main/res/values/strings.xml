@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">pruebav5</string>
+    <string name="robotinfo">RobotInfo</string>
+    <string name="activities">Actividades</string>
+    <string name="prueba_robosonit_5">Prueba Robosonit 5</string>
+    <string name="informaci_n_de_carga">Información de carga</string>
+    <string name="informaci_n_del_dispositivo">Información del dispositivo</string>
+    <string name="bateria_restante">Bateria restante</string>
+    <string name="error_en_la_conexion">Error en la conexion</string>
+</resources>
