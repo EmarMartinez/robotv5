@@ -57,25 +57,29 @@ public class CabezaFragment extends Fragment {
         btnSubir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                RobotApi.getInstance().moveHead(0,"relative","relative",0,-10,null);
+                System.out.println("Avanzando..........");
+                RobotApi.getInstance().goForward(0, 0.2f,null);
             }
         });
         btnBajar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                RobotApi.getInstance().moveHead(0,"relative","relative",0,10,null);
+                System.out.println("Retrocediendo..........");
+                RobotApi.getInstance().goBackward(0, 0.2f, null);
             }
         });
         btnIzquierda.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                RobotApi.getInstance().moveHead(0,"relative","relative",-10,0,null);
+                System.out.println("Izquierda..........");
+                RobotApi.getInstance().turnLeft(0, 0.2f, null);
             }
         });
         btnDerecha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                RobotApi.getInstance().moveHead(0,"relative","relative",10,0,null);
+                System.out.println("Derecha..........");
+                RobotApi.getInstance().turnRight(0, 0.2f, null);
             }
         });
 

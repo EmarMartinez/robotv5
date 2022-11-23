@@ -19,4 +19,6 @@
     <string name="izquierda">Izquierda</string>
     <string name="derecha">Derecha</string>
     <string name="bajar">Bajar</string>
+    <string name="avanzar">Avanzar</string>
+    <string name="retroceder">Retroceder</string>
 </resources>
