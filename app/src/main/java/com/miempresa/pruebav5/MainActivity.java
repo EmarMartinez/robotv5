@@ -13,6 +13,7 @@ import com.ainirobot.coreservice.client.ApiListener;
 import com.ainirobot.coreservice.client.RobotApi;
 import com.miempresa.pruebav5.application.ModuleCallback;
 import com.miempresa.pruebav5.fragments.ActivitiesFragment;
+import com.miempresa.pruebav5.fragments.CabezaFragment;
 import com.miempresa.pruebav5.fragments.ConectionFailedFragment;
 import com.miempresa.pruebav5.fragments.InfoFragment;
 import com.miempresa.pruebav5.fragments.MainFragment;
@@ -21,11 +22,15 @@ public class MainActivity extends AppCompatActivity {
 
     Button btnInfo;
     Button btnActivities;
+    Button btnCabeza;
+    Button btnMovimiento;
 
     FragmentTransaction transaction;
     Fragment fragmentMain;
     Fragment fragmentInfo;
     Fragment fragmentActivities;
+    Fragment fragmentMovimiento;
+    Fragment fragmentCabeza;
 
     private int checkTimes;
 
@@ -66,6 +71,16 @@ public class MainActivity extends AppCompatActivity {
                 transaction = getSupportFragmentManager().beginTransaction();
                 fragmentInfo = new InfoFragment();
                 transaction.replace(R.id.main_fragment,fragmentInfo).commit();
+            }
+        });
+
+        btnCabeza = (Button)findViewById(R.id.btn_cabeza_movimiento);
+        btnCabeza.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                transaction = getSupportFragmentManager().beginTransaction();
+                fragmentCabeza = new CabezaFragment();
+                transaction.replace(R.id.main_fragment,fragmentCabeza).commit();
             }
         });
 

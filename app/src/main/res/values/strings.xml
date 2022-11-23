@@ -13,4 +13,10 @@
     <string name="introduzca_su_mensaje">Introduzca su mensaje</string>
     <string name="comenzar">Comenzar</string>
     <string name="parar">Parar</string>
+    <string name="movimiento">Movimiento</string>
+    <string name="movimiento_cabeza">Movimiento Cabeza</string>
+    <string name="subir">Subir</string>
+    <string name="izquierda">Izquierda</string>
+    <string name="derecha">Derecha</string>
+    <string name="bajar">Bajar</string>
 </resources>
