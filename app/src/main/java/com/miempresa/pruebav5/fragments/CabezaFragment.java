@@ -22,6 +22,7 @@ public class CabezaFragment extends Fragment {
     Button btnIzquierda;
     Button btnBajar;
     Button btnDerecha;
+    Button btnStop;
 
 
     public CabezaFragment() {
@@ -52,6 +53,7 @@ public class CabezaFragment extends Fragment {
         btnBajar = (Button)view.findViewById(R.id.btn_bajar);
         btnIzquierda = (Button)view.findViewById(R.id.btn_izq);
         btnDerecha = (Button)view.findViewById(R.id.btn_derecha);
+        btnStop = (Button)view.findViewById(R.id.btn_stop);
 
 
         btnSubir.setOnClickListener(new View.OnClickListener() {
@@ -82,7 +84,13 @@ public class CabezaFragment extends Fragment {
                 RobotApi.getInstance().turnRight(0, 0.2f, null);
             }
         });
-
+        btnStop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                System.out.println("Parando movimiento....");
+                RobotApi.getInstance().stopMove(0, null);
+            }
+        });
 
     }
 }

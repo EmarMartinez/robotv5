@@ -65,6 +65,7 @@ public class ActivitiesFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String text = "Hello my name is lucki";
+                System.out.println("Leyendo frase....");
 //                String text = etDictado.getText().toString();
 //                if (text.equals("")) {
 //                    text = etDictado.getHint().toString();
