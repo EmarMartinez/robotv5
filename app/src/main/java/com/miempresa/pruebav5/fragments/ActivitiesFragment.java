@@ -64,10 +64,11 @@ public class ActivitiesFragment extends Fragment {
         btnComenzar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String text = etDictado.getText().toString();
-                if (text.equals("")) {
-                    text = etDictado.getHint().toString();
-                }
+                String text = "Hello my name is lucki";
+//                String text = etDictado.getText().toString();
+//                if (text.equals("")) {
+//                    text = etDictado.getHint().toString();
+//                }
                 playText(text);
             }
         });

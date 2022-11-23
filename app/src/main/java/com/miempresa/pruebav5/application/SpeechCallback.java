@@ -6,7 +6,6 @@ import com.ainirobot.coreservice.client.speech.SkillCallback;
 
 public class SpeechCallback extends SkillCallback {
 
-    private static final String TAG = SpeechCallback.class.getName();
 
     @Override
     public void onSpeechParResult(String s) throws RemoteException {
